@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+:root {
+    --color-principal: #0A3871;
+    --color-secundario: #F3F5FC;
+    --color-terciario: #FFF;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "Inter";
+}
+
+body {
+    height: 1024px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background: var(--color-secundario);
+}
+
+main {
+    height: 75%;
+}
+
+#texto-1 {
+    width: 100%;
+    height: 450px;
+    font-size: 35px;
+    background: var(--color-secundario);
+    color: var(--color-principal);
+    border: none;
+    outline: none;
+    margin-top: 40px;
+    text-align: center;
+}
+
+#texto-1::placeholder {
+    color: var(--color-principal);
+}
+
+#condicion {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#encriptar {
+    border: none;
+    width: 100%;
+    height: 67px;
+    border: 2px solid;
+    border-color: var(--color-principal);
+    background: var(--color-principal);
+    border-radius: 24px;
+    color: var(--color-secundario);
+    font-size: 20px;
+}
+
+#encriptar:hover {
+    border: 2px solid;
+    border-color: var(--color-principal);
+    background: var(--color-secundario);
+    color: var(--color-principal);
+    cursor: pointer;
+}
+
+#desencriptar {
+    width: 100%;
+    height: 67px;
+    border: 2px solid;
+    border-color: var(--color-principal);
+    background: var(--color-secundario);
+    border-radius: 24px;
+    margin-top: 20px;
+    color: var(--color-principal);
+    font-size: 20px;
+}
+
+#desencriptar:hover {
+    cursor: pointer;
+}
+
+#aside {
+    width: 100%;
+    height: 25%;
+    background: var(--color-terciario);
+    border-radius: 20px;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    padding: 20px;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+}
+
+#munieco {
+    display: none;
+}
+
+#texto-2 {
+    display: none;
+    width: 100%;
+    height: 54%;
+    border: none;
+    font-size: 20px;
+    text-align: center;
+}
+
+#ningun {
+    font-size: 30px;
+    font-weight: 900;
+}
+
+#ingresa {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+#copiar {
+    width: 100%;
+    height: 67px;
+    border: 2px solid;
+    border-color: var(--color-principal);
+    background: var(--color-terciario);
+    border-radius: 24px;
+    margin-top: 20px;
+    color: var(--color-principal);
+    font-size: 20px;
+    display: none;
+}
+
+#copiar:hover {
+    border: 2px solid;
+    border-color: var(--color-principal);
+    background: var(--color-principal);
+    color: var(--color-terciario);
+    cursor: pointer;
+}
+
+/* Para Tablets */
+@media (min-width: 768px) {
+
+    main {
+        height: 70%;
+    }
+
+    #condicion {
+        text-align: left;
+    }
+
+    #botones {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #desencriptar {
+        margin-top: 0px;
+        margin-left: 20px;
+    }
+
+    #texto-2 {
+        height: 64%;
+    }
+
+    #aside {
+        height: 30%;
+    }
+
+}
+
+/* Para PC */
+@media (min-width: 1024px) {
+    body {
+        padding: 40px;
+        display: flex;
+        flex-direction: row;
+        gap: 3%;
+    }
+
+    main {
+        width: 65%;
+        height: 100%;
+    }
+
+    #texto-1 {
+        height: 77%;
+    }
+
+    #aside {
+        width: 35%;
+        height: 100%;
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #texto-2 {
+        height: 90%;
+    }
+
+    #munieco {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin-bottom: 70px;
+    }
+}
